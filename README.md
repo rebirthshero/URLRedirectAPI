@@ -1,6 +1,7 @@
 # URLRedirectAPI
 
-activate virtual env: URLRedirectAPI\venv\Scripts\activate.bat
+create a python virtual env (python 3.12.8)
+pip install -r requirements.txt
 
 API Documentation
 1. Create Short URL
