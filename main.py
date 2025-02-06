@@ -62,7 +62,7 @@ def shorten_url():
         if delta.days >= 0:
             return jsonify({
                 "success": True,
-                "short_url": f"http://localhost:5000/{existing_mapping.short_url}",
+                "short_url": f"http://127.0.0.1:8000/{existing_mapping.short_url}",
                 "expiration_date": existing_mapping.expiration_date.isoformat()
             }), 200
 
@@ -74,7 +74,7 @@ def shorten_url():
 
     return jsonify({
         "success": True,
-        "short_url": f"http://localhost:5000/{short_url}",
+        "short_url": f"http://127.0.0.1:8000/{short_url}",
         "expiration_date": expiration_date.isoformat(),
         "reason": "URL successfully shortened"
     }), 201
@@ -101,5 +101,5 @@ def redirect_url(short_url):
 if __name__ == "__main__":
     with app.app_context():
         db.create_all()
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=8000, debug=True)
 

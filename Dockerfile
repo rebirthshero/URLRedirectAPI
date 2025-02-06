@@ -11,10 +11,11 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Set the working directory in the container
-COPY D:\Git_project\URLRedirectAPI\main.py /app/
+COPY main.py /app/
 
-# Expose port 5000
-EXPOSE 5000
+
+# Expose port 8000
+EXPOSE 8000
 
 # Command to run the app
 CMD ["python", "main.py"]

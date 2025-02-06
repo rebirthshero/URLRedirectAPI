@@ -1,0 +1,13 @@
+User Guide:
+(Asume)
+
+1. Download docker image:
+docker pull sandrapeng/urlredirectapi:v1
+
+2. Run the container:
+docker run -p 8000:8000 sandrapeng/urlredirectapi:v1
+
+3. Use any API testing tool, such as Postman.
+
+4. Recommend starting by using the POST method to test the URL shortening functionality, then use the GET method to test URL redirection.
+(For more details on API testing, refer to the README.md file in the GitHub repository.)
